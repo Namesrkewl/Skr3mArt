@@ -1,0 +1,394 @@
+/* Master Styles */
+body {
+    font-family: "Oswald", "sans-serif";
+    margin: 0px;
+    overflow: visible;
+}
+
+.container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(images/Wallpaper.jpg);
+    height: 100%;
+}
+
+.backdrop-container {
+    backdrop-filter: blur(8px) brightness(60%);
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+
+/* Nav Styles */
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: black;
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid dodgerblue;
+}
+
+.nav-link-wrapper a:hover {
+    color: dodgerblue;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid dodgerblue;
+}
+
+.active-nav-link a {
+    color: dodgerblue !important;
+}
+
+.right-side > div {
+    color: white;
+}
+
+/* Banner Styles */
+
+.banner-wrapper {
+    display: flex;
+    background-color: black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-content: center;
+    filter: opacity(80%);
+    width: 100%;
+}
+
+.banner-content > p {
+    font-size: 0.9em;
+    color: white;
+}
+
+
+/* Index Styles */
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 800px;
+    width: 100%;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper > img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper > .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover > .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* About Page Styles */
+
+.profile-image-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.profile-content-wrapper {
+    color: lightgray;
+    width: 50%;
+    margin-left: 25%;
+    padding-bottom: 20px;
+}
+
+.profile-content-wrapper > h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.profile-content-wrapper > p {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+/* Gallery Styles */
+
+.gallery-text-wrapper {
+    color: lightgrey;
+}
+
+.gallery-text-wrapper > h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.gallery-text-wrapper > p {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.gallery-grid-wrapper {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 70%;
+}
+
+.gallery-item-wrapper {
+}
+
+.gallery-img-background {
+    margin: 10px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-img-background > img {
+    width: 250px;
+    height: 250px;
+}
+
+.gallery-img-info-background {
+    display: flex;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    margin-top: 0px;
+    background-image: url(images/background-gradient.png);
+    opacity: 0;
+}
+
+.gallery-img-info {
+    display: flex;
+    position: absolute;
+    margin-top: 165px;
+    margin-left: 20px;
+    opacity: 0;
+
+}
+
+.gallery-img-logo > img {
+    width: 50px;
+    height: 50px;
+}
+
+.gallery-img-text-wrapper {
+    color: lightgrey;
+    margin-left: 20px;
+}
+
+.gallery-img-text-wrapper > .subtitle {
+    font-size: 20px;
+}
+
+.gallery-img-text-wrapper > .creator {
+    font-size: 12px;
+}
+
+.gallery-img-text-wrapper > .info {
+    visibility: hidden;
+}
+
+.img-visible {
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.img-showing {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+/* Gallery Pop-Up Styles */
+
+.pop-up-container > img {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+.pop-up-wrapper {
+    visibility: hidden;
+    display: flex;
+    position: sticky;
+    height: 0px;
+    top: 50px;
+    margin-left: 200px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.pop-up-background-showing {
+    opacity: .9 !important;
+    visibility: visible !important;
+}
+
+.pop-up-wrapper-showing {
+    transition: .5s;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.pop-up-img > img{
+    display: flex;
+    width: 750px;
+    height: 850px;
+}
+
+.pop-up-info-wrapper {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.pop-up-info-wrapper > img {
+    width: 800px;
+    height: 800px;
+    opacity: .9;
+}
+
+.pop-up-info {
+    position: absolute;
+    color: lightgrey;
+    margin-left: 75px;
+    margin-right: 200px;
+}
+
+.pop-up-info > h1 {
+    font-size: 60px;
+    margin-bottom: -20px;
+}
+
+.pop-up-info > h3 {
+    font-size: 20px;
+}
+
+.pop-up-info > p {
+    font-size: 20px;
+}
+
+/* Commissions Styles */
+
+.commissions-content-wrapper {
+    color: lightgrey;
+    width: 60%;
+    margin-left: 25%;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.commissions-content-wrapper > h1 {
+    color: darkgoldenrod;
+    font-size: 70px;
+}
+
+.commissions-content-wrapper > p > a {
+    color: white;
+}
+
+/* Contact Styles */
+
+.contact-content-wrapper {
+    color: lightgrey;
+    width: 60%;
+    margin-left: 30%;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.contact-content-wrapper > img {
+    width: 300px;
+    margin-left: 20%;
+    margin-top: 50px;
+}
+
+.contact-content-wrapper > h1 {
+    margin-left: 6%;
+    font-size: 50px;
+}
+
+.contact-content-wrapper > p {
+    margin-left: 20%;
+    font-size: 25px;
+}
+
+.contact-content-wrapper > p > a {
+    color: white;
+}
+
+.contact-content-wrapper > p > a > img {
+    width: 20px;
+}
+
+.contact-content-wrapper > p > img {
+    width: 20px;
+}
